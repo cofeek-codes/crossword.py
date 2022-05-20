@@ -9,7 +9,6 @@ def get_words(theme):
     words = theme_words_file.read()
     theme_words_file.close()
     words = words.split('\n')
-    # print(words)
     return words
 
 
@@ -20,10 +19,8 @@ def main():
 
     current_theme_words = get_words(themes[0])
     print(current_theme_words)
-
-
-# for theme in themes:
-#     pass
+    # get_current theme and prev
+    # randomize words
 
 
 if __name__ == '__main__':
