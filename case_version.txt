@@ -1,0 +1,13 @@
+     # match theme:
+        #     case 'information':
+        #         theme_words_file = open(f'themes/information/information.txt')
+        #         words = theme_words_file.read()
+        #         theme_words_file.close()
+        #         words = words.split('\n')
+        #         # print(words)
+        #     case 'models':
+        #         theme_words_file = open(f'themes/models/models.txt')
+        #         words = theme_words_file.read()
+        #         theme_words_file.close()
+        #         words = words.split('\n')
+        #         print(words)

@@ -11,21 +11,10 @@ def main():
     themes_storage.close()
 
     for theme in themes:
-        if os.path.exists(f'themes/{theme}') == False:
-            os.mkdir(f'themes/{theme}')
-            words_storage = open(f'themes/{theme}/{theme}.txt', 'w')
-            words_storage.close()
-            words_storage = open(f'themes/{theme}/{theme}.txt', 'w')
-            words = words_storage.read()
-            words_storage.close()
-
-        else:
-            words_storage = open(f'themes/{theme}/{theme}.txt', 'w')
-            words_storage.close()
-            words_storage = open(f'themes/{theme}/{theme}.txt', 'r')
-            words = words_storage.read()
-            words_storage.close()
-
+        theme_words_file = open(f'themes/{theme}/{theme}.txt')
+        words = theme_words_file.read()
+        theme_words_file.close()
+        words = words.split('\n')
         print(words)
 
 
