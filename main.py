@@ -14,13 +14,10 @@ def get_words(theme):
 
 
 def main():
-    init_themes()
-    themes_storage = open('themes/themes.txt')
-    themes = get_themes(themes_storage)
-    themes_storage.close()
+    themes = init_themes()
 
     current_theme_words = get_words(themes[0])
-    # print(current_theme_words)
+    print(current_theme_words)
 
     # get_current theme and prev
     # randomize words
@@ -36,6 +33,7 @@ def init_themes():
             theme_words = open(f'themes/{theme}/{theme}.txt', 'w')
             theme_words.close()
             print(f'Заполните тему {theme}')
+    return themes
 
 
 if __name__ == '__main__':
