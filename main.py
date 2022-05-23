@@ -25,11 +25,16 @@ def main():
             # prev
             prev = themes[(themes.index(chosen_theme)) - 2]
             prev = get_words(prev)
+            current_words = theme_words + prev
+
             # print(prev)
             theme_words = get_words(chosen_theme)
-        else:
-            print('err')
-        current_words = theme_words + prev
+        elif themes.index(chosen_theme) >= 1:
+
+            prev = themes[(themes.index(chosen_theme)) - 1]
+            prev = get_words(prev)
+            current_words = theme_words + prev
+
         print(current_words)
     # get_current theme and prev
     # randomize words
