@@ -21,6 +21,7 @@ def main():
     if chosen_theme not in themes:
         print('Выбраной темы не существует')
     else:
+
         theme_words = get_words(chosen_theme)
         print(theme_words)
     # get_current theme and prev
