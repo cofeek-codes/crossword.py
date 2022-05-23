@@ -10,3 +10,7 @@ def randomize_words(current_words):
     print(len(randomized_words))
     print(len(current_words))
     # return randomized_words
+
+
+# per to variable
+# less check
