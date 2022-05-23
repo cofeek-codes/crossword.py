@@ -5,6 +5,7 @@ from pywebio.output import *
 from pywebio.output import *
 
 from logic.get_themes import get_themes
+from logic.randomizer import randomize_words
 
 
 def get_words(theme):
@@ -20,10 +21,11 @@ chosen_theme = input('выбирете тему ')
 
 def main():
     themes = init_themes()
-    theme_words = get_words(chosen_theme)
+
     if chosen_theme not in themes:
         print('Выбраной темы не существует')
     else:
+        theme_words = get_words(chosen_theme)
         if themes.index(chosen_theme) >= 2:
             # prev
             # second backward theme
@@ -45,8 +47,8 @@ def main():
             # empty string check
         if '' in current_words:
             current_words.remove('')
-        print(current_words)
-
+        # print(current_words)
+        randomize_words(current_words)
     # randomize words
 
 
