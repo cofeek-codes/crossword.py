@@ -1,3 +1,4 @@
+from itertools import count
 import os
 import re
 from pywebio.output import *
@@ -45,7 +46,7 @@ def main():
         if '' in current_words:
             current_words.remove('')
         print(current_words)
-    # get_current theme and prev
+
     # randomize words
 
 
