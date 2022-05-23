@@ -7,9 +7,9 @@ from logic.get_themes import get_themes
 
 def get_words(theme):
     theme_words_file = open(f'themes/{theme}/{theme}.txt', 'r')
-    words = theme_words_file.read()
+    words_ff = theme_words_file.read()
     theme_words_file.close()
-    words = words.split('\n')
+    words = words_ff.split('\n')
     return words
 
 
@@ -21,9 +21,12 @@ def main():
     if chosen_theme not in themes:
         print('Выбраной темы не существует')
     else:
-
+        prev = themes[(themes.index(chosen_theme)) - 2]
+        prev = get_words(prev)
         theme_words = get_words(chosen_theme)
-        print(theme_words)
+        # print(theme_words)
+        print(prev)
+
     # get_current theme and prev
     # randomize words
 
