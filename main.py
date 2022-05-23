@@ -21,12 +21,16 @@ def main():
     if chosen_theme not in themes:
         print('Выбраной темы не существует')
     else:
-        prev = themes[(themes.index(chosen_theme)) - 2]
-        prev = get_words(prev)
-        theme_words = get_words(chosen_theme)
-        # print(theme_words)
-        print(prev)
-
+        if themes.index(chosen_theme) >= 2:
+            # prev
+            prev = themes[(themes.index(chosen_theme)) - 2]
+            prev = get_words(prev)
+            # print(prev)
+            theme_words = get_words(chosen_theme)
+        else:
+            print('err')
+        current_words = theme_words + prev
+        print(current_words)
     # get_current theme and prev
     # randomize words
 
