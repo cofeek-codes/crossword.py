@@ -18,6 +18,7 @@ chosen_theme = input('выбирете тему ')
 
 def main():
     themes = init_themes()
+    theme_words = get_words(chosen_theme)
     if chosen_theme not in themes:
         print('Выбраной темы не существует')
     else:
@@ -28,12 +29,13 @@ def main():
             current_words = theme_words + prev
 
             # print(prev)
-            theme_words = get_words(chosen_theme)
         elif themes.index(chosen_theme) >= 1:
 
             prev = themes[(themes.index(chosen_theme)) - 1]
             prev = get_words(prev)
             current_words = theme_words + prev
+        else:
+            current_words = theme_words
 
         print(current_words)
     # get_current theme and prev
