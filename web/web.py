@@ -10,6 +10,6 @@ def input_web(randomized_words, chosen_theme):
 
 def input_table(randomized_words):
     for word in randomized_words:
-        pass
-        # put_markdown(word)
-        # create table
+
+        put_markdown(word)
+    # create table
