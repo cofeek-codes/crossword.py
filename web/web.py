@@ -10,7 +10,7 @@ def input_web(randomized_words, chosen_theme):
 
 def input_table(randomized_words):
     for word in randomized_words:
-
-        pass
+        for letter in word:
+            put_text(letter)
 
     # create table
