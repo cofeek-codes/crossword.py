@@ -36,7 +36,6 @@ def main():
             theme_back_once = get_words(theme_back_once)
             current_words = theme_words + theme_back_once + theme_back_twice
 
-            # print(prev)
         elif themes.index(chosen_theme) >= 1:
 
             prev = themes[(themes.index(chosen_theme)) - 1]
@@ -48,7 +47,9 @@ def main():
         if '' in current_words:
             current_words.remove('')
         # print(current_words)
-        randomize_words(current_words)
+        randomized_words = randomize_words(current_words)
+        print(randomized_words)
+        print(len(randomized_words))
     # randomize words
 
 

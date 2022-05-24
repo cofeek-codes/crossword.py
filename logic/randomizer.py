@@ -7,10 +7,7 @@ def randomize_words(current_words):
     for word in range(0, int(per)):
         word = random.choice(current_words)
         randomized_words.append(word)
-    print(randomized_words)
-    print(len(randomized_words))
-    print(len(current_words))
-    # return randomized_words
+    return randomized_words
 
 
 # less check
