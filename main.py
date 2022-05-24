@@ -25,6 +25,7 @@ def main():
 
     if chosen_theme not in themes:
         print('Выбраной темы не существует')
+        put_markdown(r""" # Выбраной темы не существует""")
     else:
         theme_words = get_words(chosen_theme)
         if themes.index(chosen_theme) >= 2:
