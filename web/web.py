@@ -1,5 +1,6 @@
 from pywebio.output import *
 from pywebio.input import *
+from tabulate import tabulate
 
 
 def input_web(randomized_words, chosen_theme):
@@ -9,4 +10,6 @@ def input_web(randomized_words, chosen_theme):
 
 def input_table(randomized_words):
     for word in randomized_words:
-        put_markdown(word)
+        pass
+        # put_markdown(word)
+        # create table
