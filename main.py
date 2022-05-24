@@ -2,10 +2,11 @@ from itertools import count
 import os
 import re
 from pywebio.output import *
-from pywebio.output import *
+from pywebio.input import *
 
 from logic.get_themes import get_themes
 from logic.randomizer import randomize_words
+from web.web import input_web
 
 
 def get_words(theme):
@@ -50,7 +51,7 @@ def main():
         randomized_words = randomize_words(current_words)
         print(randomized_words)
         print(len(randomized_words))
-    # randomize words
+        input_web(randomized_words, chosen_theme)
 
 
 def init_themes():
