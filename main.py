@@ -51,6 +51,7 @@ def main():
         # print(current_words)
         randomized_words = randomize_words(current_words)
         randomized_words = set(randomized_words)
+        randomized_words = list(randomized_words)
         print(randomized_words)
         print(len(randomized_words))
         input_web(randomized_words, chosen_theme)
