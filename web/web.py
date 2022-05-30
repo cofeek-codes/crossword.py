@@ -9,8 +9,18 @@ def input_web(randomized_words, chosen_theme):
 
 
 def input_table(randomized_words):
-    for word in randomized_words:
-        for letter in word:
-            put_text(letter)
+    words = randomized_words
+    for word in words:
 
-    # create table
+        for letter in word:
+            if (word.index(letter) + 1) < len(word):
+                next_letter = word[word.index(letter) + 1]
+            else:
+                # next_letter = word[word.index(letter)]
+                pass
+            put_table([
+                [put_text(letter), put_text(letter), put_text(letter),
+                 put_text(next_letter), ],
+
+
+            ])
