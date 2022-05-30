@@ -16,7 +16,6 @@ def input_table(randomized_words):
             if (word.index(letter) + 1) < len(word):
                 next_letter = word[word.index(letter) + 1]
             else:
-                # next_letter = word[word.index(letter)]
                 pass
             put_table([
                 [put_text(letter), put_text(letter), put_text(letter),
