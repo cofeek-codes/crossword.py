@@ -18,8 +18,4 @@ def input_table(randomized_words):
             else:
                 pass
             put_table([
-                [put_text(letter), put_text(letter), put_text(letter),
-                 put_text(next_letter), ],
-
-
-            ])
+                [put_row(content=[put_text(letter), put_text(next_letter)])]])
