@@ -22,4 +22,4 @@ def input_table(randomized_words):
                  put_text(next_letter)],
                 [put_text(next_letter), put_text(
                     next_letter), put_text(next_letter)],
-            ], cell_width='100px', cell_height='100px')
+            ], cell_width='30px', cell_height='30px')
