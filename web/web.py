@@ -17,5 +17,9 @@ def input_table(randomized_words):
                 next_letter = word[word.index(letter) + 1]
             else:
                 pass
-            put_table([
-                [put_row(content=[put_text(letter), put_text(next_letter)]), put_column(content=[put_text(letter), put_text(next_letter)])]])
+            put_grid([
+                [put_text(letter), put_text(next_letter),
+                 put_text(next_letter)],
+                [put_text(next_letter), put_text(
+                    next_letter), put_text(next_letter)],
+            ], cell_width='100px', cell_height='100px')
