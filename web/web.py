@@ -11,16 +11,15 @@ def input_web(randomized_words, chosen_theme):
 
 def input_table(randomized_words):
     words = randomized_words
+    all_letters = []
     for word in words:
-
         for letter in word:
-            if (word.index(letter) + 1) < len(word):
-                next_letter = word[word.index(letter) + 1]
-                random_letter = random.choice(word)
+            all_letters.append(letter)
+        for letter in all_letters:
 
-        put_grid([
-            [put_text(random_letter), put_text(next_letter),
-                 put_text(random_letter), put_text(random_letter), put_text(random_letter), put_text(letter)],
-            [put_text(next_letter), put_text(
-                next_letter), put_text(random_letter), put_text(random_letter), put_text(random_letter), put_text(random_letter)],
-        ], cell_width='70px', cell_height='70px').style('font-size:18px; font-weight:bold;')
+            put_grid([
+                [put_text(letter), put_text(letter),
+                    put_text(letter), put_text(letter), put_text(letter), put_text(letter)],
+                [put_text(letter), put_text(
+                    letter), put_text(letter), put_text(letter), put_text(letter), put_text(letter)],
+            ], cell_width='70px', cell_height='70px').style('font-size:18px; font-weight:bold;')
