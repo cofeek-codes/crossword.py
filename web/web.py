@@ -20,7 +20,7 @@ def input_table(randomized_words):
 
         put_grid([
             [put_text(random_letter), put_text(next_letter),
-                 put_text(letter), put_text(letter), put_text(random_letter), put_text(letter)],
+                 put_text(random_letter), put_text(random_letter), put_text(random_letter), put_text(letter)],
             [put_text(next_letter), put_text(
-                next_letter), put_text(random_letter), put_text(letter), put_text(letter), put_text(letter)],
+                next_letter), put_text(random_letter), put_text(random_letter), put_text(random_letter), put_text(random_letter)],
         ], cell_width='70px', cell_height='70px').style('font-size:18px; font-weight:bold;')
